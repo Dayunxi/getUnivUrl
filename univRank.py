@@ -1,4 +1,4 @@
-import requests
+import requests, bs4
 from bs4 import BeautifulSoup
  
 def getHTMLText(url):
@@ -25,6 +25,7 @@ def main():
     with open('univ2016.csv', 'wt') as file:
         for item in uinfo:
             file.write('{},{},{},{}\n'.format(item[0], item[1], item[2], item[3]))
-    
-    
-main()
+
+
+if __name__ == '__main__':
+    main()
